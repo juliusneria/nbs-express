@@ -1,61 +1,55 @@
-<!--version 3.0-->
 <!DOCTYPE html>
 <html lang="en" ng-app="App">
 <head>
-    <meta property="og:image" content=""/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:title" content="NBS Express"/>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Page Blank | Materialize - Material Design Admin Template</title>
 
-    <title>NBS Express</title>
-    <link rel="stylesheet" href="libs/bootstrap-4.0.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- Favicons-->
+    <link rel="icon" href="materialize/assets/images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="materialize/images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+
+
+    <!-- CORE CSS-->
+    <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->
+    <link href="materialize/css/custom/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="materialize/js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="materialize/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="materialize/js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 </head>
-<body class="tap">
+
+<body>
 
 <ui-view></ui-view>
-<script>window.jQuery || document.write('<script  src="assets/js/jquery-3.2.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="materialize/libs/angular.js"></script>
+<script type="text/javascript" src="materialize/libs/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/app.config.js"></script>
 
-<!--LIBS-->
-<script src="libs/angular.js"></script>
-<script src="libs/angular-ui-router.min.js"></script>
-<script src="libs/node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="libs/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/components/controllers/projectsCtrl.js"></script>
+<script type="text/javascript" src="app/components/controllers/tasksCtrl.js"></script>
+<script type="text/javascript" src="app/components/controllers/timesheetsCtrl.js"></script>
+<script type="text/javascript" src="app/directives/controllers/navCtrl.js"></script>
+<script type="text/javascript" src="app/directives/navDir.js"></script>
 
-<!--ANGULAR MAIN-->
-<script src="app/app.module.js"></script>
-<script src="app/app.config.js"></script>
-
-<!--ANGULAR CONTROLLERS-->
-<script src="app/components/controllers/homeCtrl.js"></script>
-<script src="app/components/controllers/bookCtrl.js"></script>
-<script src="app/components/controllers/managerCtrl.js"></script>
-
-<!--ANGULAR DIRECTIVES-->
-<script src="app/directives/nav/controllers/navCtrl.js"></script>
-<script src="app/directives/nav/navDir.js"></script>
-<!--<script src="app/directives/widgets/controllers/footerCtrl.js"></script>
-<script src="app/directives/widgets/controllers/headerCtrl.js"></script>
-<script src="app/directives/widgets/controllers/heroCtrl.js"></script>
-<script src="app/directives/widgets/controllers/socialFeaturesCtrl.js"></script>
-<script src="app/directives/home/controllers/featuredCtrl.js"></script>
-<script src="app/directives/home/controllers/activitiesCtrl.js"></script>
-<script src="app/directives/home/controllers/facilitiesCtrl.js"></script>
-<script src="app/directives/nav/controllers/navCtrl.js"></script>
-
-<script src="app/directives/widgets/footerDir.js"></script>
-<script src="app/directives/widgets/headerDir.js"></script>
-<script src="app/directives/widgets/heroDir.js"></script>
-<script src="app/directives/widgets/socialFeatureDir.js"></script>
-<script src="app/directives/home/featuredDir.js"></script>
-<script src="app/directives/home/activitiesDir.js"></script>
-<script src="app/directives/home/facilitiesDir.js"></script>
-<script src="app/directives/abnavDir.jsr.js"></script>-->
-
-<!--ANGULAR SERVICES-->
-<script>if (window.module) module = window.module;</script>
-<script src="app/services/RestServices.js"></script>
+<script type="text/javascript" src="materialize/js/plugins/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+<script type="text/javascript" src="materialize/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="materialize/js/plugins.js"></script>
+<script type="text/javascript" src="materialize/js/custom-script.js"></script>
 
 </body>
 

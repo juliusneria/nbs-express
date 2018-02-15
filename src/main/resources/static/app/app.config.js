@@ -1,25 +1,25 @@
 angular
-    .module('App')
+    .module("App")
     .config(configure);
 configure.$inject = ['$stateProvider', '$urlRouterProvider'];
 function configure ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-        .state('home', {
-            url: '/home',
-            templateUrl: 'app/components/views/home.html',
-            controller: 'homeCtrl'
+        .state('tasks', {
+            url: '/tasks',
+            templateUrl: 'app/components/views/tasks.html',
+            controller: 'tasksCtrl'
         })
-        .state('books', {
-            url: '/books',
-            templateUrl: 'app/components/views/book.html',
-            controller: 'bookCtrl'
+        .state('projects', {
+            url: '/projects',
+            templateUrl: 'app/components/views/projects.html',
+            controller: 'projectsCtrl'
         })
-        .state('managers', {
-            url: '/managers',
-            templateUrl: 'app/components/views/manager.html',
-            controller: 'managerCtrl'
+        .state('timesheets', {
+            url: '/timesheets',
+            templateUrl: 'app/components/views/timesheets.html',
+            controller: 'timesheetsCtrl'
         });
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/timesheets");
 }
