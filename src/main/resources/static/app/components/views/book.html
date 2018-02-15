@@ -1,0 +1,98 @@
+<div class="container-fluid" role="main">
+    <nav-dir></nav-dir>
+    <div>
+        <h1 class="m-t-lg text-center" style="margin-top: 7%">Books Lists</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+            Launch Add modal
+        </button>
+        <hr class="my-4">
+
+        <div class="fields">
+            <div class="row fields h-10">
+                <div align="center" class="col-lg-1">
+                    <h1>ID</h1>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h1>Author</h1>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h1>Genre</h1>
+                </div>
+                <div align="center" class="col-lg-4">
+                    <h1>Title</h1>
+                </div>
+                <div align="center" class="col-lg-3">
+                    <h1>Controls</h1>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        <div ng-repeat="book in books track by $index">
+            <div class="row h-10">
+                <div align="center" class="col-lg-1">
+                    <h4>{{book.id}}</h4>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h4>{{book.author}}</h4>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h4>{{book.genre}}</h4>
+                </div>
+                <div align="center" class="col-lg-4">
+                    <h4>{{book.title}}</h4>
+                </div>
+                <div align="center" class="col-lg-3">
+                    <div>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" ng-click="set(book)" data-target="#editModal">Edit</button>
+                        <button type="button" class="btn btn-danger" ng-click="delete(book)">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Manager profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" ng-model="addBook.author" placeholder="Author" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" ng-model="addBook.genre" placeholder="Genre" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" ng-model="addBook.title" placeholder="Title">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button ng-click="save()" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Manager profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" ng-model="editBook.author" placeholder="Author" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" ng-model="editBook.genre" placeholder="Genre" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" ng-model="editBook.title" placeholder="Title">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button ng-click="update()" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
